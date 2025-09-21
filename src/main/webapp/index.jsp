@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello DevOps Students of RMIT Vietnam!</title>
+    <title>Hello DevOps Students (Thien) of RMIT Vietnam!</title>
   </head>
   <body>
     <!-- The content of the website starts here now! -->
@@ -52,37 +52,18 @@
         >Learn more about Bootstrap CSS Framework</a
       >
 
-     <%-- Add this logging code --%>
-<%@ page import="java.io.*, java.util.Date, java.text.SimpleDateFormat" %>
-<%
-    try {
-        // Define the path for the log file inside the container
-        String logDirPath = "/usr/local/tomcat/logs";
-        String logFilePath = logDirPath + "/app.log";
-
-        // Ensure the log directory exists
-        File logDir = new File(logDirPath);
-        if (!logDir.exists()) {
-            logDir.mkdirs();
-        }
-
-        // Open the log file in append mode (the 'true' flag)
-        PrintWriter outLog = new PrintWriter(new FileWriter(logFilePath, true));
-        
-        // Create a timestamp
-        String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-        
-        // Write the log entry
-        outLog.println(timestamp + " - Page accessed by a user.");
-        
-        // IMPORTANT: Close the writer to save the changes
-        outLog.close();
-    } catch (IOException e) {
-        // Basic error handling
-        e.printStackTrace();
-    }
-%>
-s
+      <%-- Add this logging code --%> <%@ page import="java.io.*,
+      java.util.Date, java.text.SimpleDateFormat" %> <% try { // Define the path
+      for the log file inside the container String logDirPath =
+      "/usr/local/tomcat/logs"; String logFilePath = logDirPath + "/app.log"; //
+      Ensure the log directory exists File logDir = new File(logDirPath); if
+      (!logDir.exists()) { logDir.mkdirs(); } // Open the log file in append
+      mode (the 'true' flag) PrintWriter outLog = new PrintWriter(new
+      FileWriter(logFilePath, true)); // Create a timestamp String timestamp =
+      new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()); // Write
+      the log entry outLog.println(timestamp + " - Page accessed by a user.");
+      // IMPORTANT: Close the writer to save the changes outLog.close(); } catch
+      (IOException e) { // Basic error handling e.printStackTrace(); } %> s
       <p style="color: green">
         <b
           >A new log entry was just added to /usr/local/tomcat/logs/app.log!
